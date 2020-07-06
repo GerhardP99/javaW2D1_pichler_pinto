@@ -1,10 +1,10 @@
 package gerhard;
 
 public class BankAccountA3 {
-    int MoneyAmount;
+    int MoneyAmount = 2500;
 
-    public void BankAccount(){
-        MoneyAmount = 2500;
+    public void BankAccount(int MoneyAmount){
+        this.MoneyAmount = MoneyAmount;
     }
 
     public void addMoney(int add){
