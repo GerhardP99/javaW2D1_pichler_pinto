@@ -34,48 +34,15 @@ public class Room {
     }
 
     public void isBooked(String day){
-        if (day == this.booked[0][0]) {
-            if (Boolean.parseBoolean(this.booked[0][1])) {
-                System.out.println("Sorry but this room is booked for the " + this.booked[0][0]);
-            } else {
-                System.out.println("This room is available!");
+        for (int i = 0; i<5; i++){
+            if (day == this.booked[i][0]) {
+                if (Boolean.parseBoolean(this.booked[i][1])) {
+                    System.out.println("Sorry but this room is booked for the " + this.booked[i][0]);
+                } else {
+                    System.out.println("This room is available!");
+                }
             }
         }
-        else if (day == this.booked[1][0]){
-            if (Boolean.parseBoolean(this.booked[1][1])) {
-                System.out.println("Sorry but this room is booked for the " + this.booked[1][0]);
-            }
-            else {
-                System.out.println("This room is available!");
-            }
-        }
-        else if (day == this.booked[2][0]){
-            if (Boolean.parseBoolean(this.booked[2][1])) {
-                System.out.println("Sorry but this room is booked for the " + this.booked[2][0]);
-            }
-            else {
-                System.out.println("This room is available!");
-            }
-        }
-        else if (day == this.booked[3][0]){
-            if (Boolean.parseBoolean(this.booked[3][1])) {
-                System.out.println("Sorry but this room is booked for the " + this.booked[3][0]);
-            }
-            else {
-                System.out.println("This room is available!");
-            }
-        }
-        else if (day == this.booked[4][0]){
-            if (Boolean.parseBoolean(this.booked[4][1])) {
-                System.out.println("Sorry but this room is booked for the " + this.booked[4][0]);
-            }
-            else {
-                System.out.println("This room is available!");
-            }
-        }
-        else{
-            System.out.println("Please enter a valid date");
-            }
     }
     public static void main(String[] args) {
         String[][] dates1 = {{"07.07.2020", "true"}, {"08.07.2020", "false"}, {"09.07.2020", "true"}, {"10.07.2020", "true"}, {"11.07.2020", "false"}};
